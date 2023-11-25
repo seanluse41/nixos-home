@@ -1,15 +1,19 @@
 { config, pkgs, ... }:
 
 {
+
+nixpkgs.config = {
+  allowUnfree = true;
+};
+
   imports = [
     ./mako/mako.nix ./waybar.nix ./bash.nix ./kitty.nix ./cursor.nix ./swaylock.nix 
     ./gammastep.nix ./swayidle.nix ./mpv.nix ./chromium.nix ./mpd.nix ./ncmpcpp.nix
-    ./vscodium.nix ./wofi.nix ./feh.nix ./gh.nix ./git.nix
+    ./vscodium.nix ./wofi.nix ./feh.nix ./gh.nix ./git.nix ./packages.nix
   ];
   home.username = "sean";
   home.homeDirectory = "/home/sean";
-
-  home.stateVersion = "23.05"; # Please read the comment before changing.
+  home.stateVersion = "23.11";
 
 home.packages = [
   pkgs.htop

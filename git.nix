@@ -12,4 +12,7 @@
 	credential."https://github.com".helper = "!gh auth git-credential";
     };
   };
+  programs.git-credential-oauth = {
+    enable = true;
+  };
 }

@@ -1,7 +1,6 @@
 { pkgs, config, ... }:
   {
     home.packages = with pkgs; [
-    vim
     wget
 polkit
 neofetch
@@ -11,7 +10,6 @@ wl-clipboard
 qt5.qtwayland
 qt6.qtwayland
 killall 
-git
 unzip
 unrar
 wireplumber
@@ -20,7 +18,6 @@ slurp
 swappy
 gamescope
 libnotify
-dolphin
 ranger
 libva
 vaapiVdpau
@@ -44,7 +41,6 @@ godot_4
 cachix
 yuzu-early-access
 ryujinx
-gh
 grim
 qbittorrent
 hyprpicker
@@ -59,5 +55,10 @@ mpc-cli
 jackett
 retroarchFull
 wf-recorder
+p7zip
+appimage-run
+yt-dlp
+tartube
+rpi-imager
   ];
 }
