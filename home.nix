@@ -9,7 +9,7 @@ nixpkgs.config = {
   imports = [
     ./mako/mako.nix ./waybar.nix ./bash.nix ./kitty.nix ./cursor.nix ./swaylock.nix 
     ./gammastep.nix ./swayidle.nix ./mpv.nix ./chromium.nix ./mpd.nix ./ncmpcpp.nix
-    ./vscodium.nix ./wofi.nix ./feh.nix ./gh.nix ./git.nix ./packages.nix
+    ./vscodium.nix ./wofi.nix ./feh.nix ./gh.nix ./git.nix ./packages.nix ./xdgMimeApps.nix
   ];
   home.username = "sean";
   home.homeDirectory = "/home/sean";

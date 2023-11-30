@@ -60,5 +60,6 @@ appimage-run
 yt-dlp
 tartube
 rpi-imager
+ripgrep
   ];
 }
