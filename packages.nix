@@ -61,5 +61,6 @@
     rpi-imager
     nil
     nixpkgs-fmt
+    flowblade
   ];
 }

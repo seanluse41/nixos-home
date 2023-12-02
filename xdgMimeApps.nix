@@ -10,5 +10,8 @@
 	"x-scheme-handler/mailto" = ["chromium-browser.desktop"];
 	"default" = ["thunar.desktop"];
     };
+    associations.added = {
+	"application/octet-stream" = ["chromium-browser.desktop"];
+    };
   };
 }
