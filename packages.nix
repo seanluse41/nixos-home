@@ -62,5 +62,6 @@
     nil
     nixpkgs-fmt
     flowblade
+    pv
   ];
 }
