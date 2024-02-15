@@ -149,9 +149,9 @@
   ];
 
   # Configure keymap in X11
-  services.xserver = {
+  services.xserver.xkb = {
     layout = "jp";
-    xkbVariant = "";
+    variant = "";
   };
 
   i18n.inputMethod = {
