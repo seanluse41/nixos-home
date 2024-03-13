@@ -12,7 +12,6 @@
     ./bash.nix
     ./kitty.nix
     ./cursor.nix
-    ./swaylock.nix
     ./gammastep.nix
     ./swayidle.nix
     ./mpv.nix
@@ -41,6 +40,8 @@
   xdg.configFile."swappy/config".source = ./swappy.conf;
   xdg.configFile."hypr/hyprland.conf".source = ./hyprland.conf;
   xdg.configFile."hypr/hyprpaper.conf".source = ./hyprpaper.conf;
+  xdg.configFile."hypr/hyprlock.conf".source = ./hyprlock.conf;
+  xdg.configFile."hypr/hypridle.conf".source = ./hypridle.conf;
   home.file = { };
 
   home.sessionVariables = {

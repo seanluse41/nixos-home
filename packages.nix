@@ -6,6 +6,8 @@
     neofetch
     hyprpicker
     hyprpaper
+    hypridle
+    hyprlock
     wl-clipboard
     qt5.qtwayland
     qt6.qtwayland
@@ -38,7 +40,6 @@
     wine-staging
     polkit_gnome
     godot_4
-    yuzu-early-access
     ryujinx
     grim
     qbittorrent
