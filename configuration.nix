@@ -176,15 +176,28 @@
   # Pipewire
   sound.enable = true;
   security.rtkit.enable = true;
-  services.pipewire = {
-    enable = true;
-    audio.enable = true;
-    pulse.enable = true;
-    alsa = {
+
+
+    services.pipewire = {
       enable = true;
-      support32Bit = true;
+      audio.enable = true;
+      pulse.enable = true;
+      alsa = {
+	enable = true;
+	support32Bit = true;
+      };
+      wireplumber.configPackages = [
+          (pkgs.writeTextDir "share/wireplumber/bluetooth.lua.d/51-bluez-config.lua" ''
+              bluez_monitor.properties = {
+            ["bluez5.enable-sbc-xq"] = true,
+            ["bluez5.enable-msbc"] = true,
+            ["bluez5.enable-hw-volume"] = true,
+            ["bluez5.headset-roles"] = "[ hsp_hs hsp_ag hfp_hf hfp_ag ]"
+        }
+          '')
+        ];
+     
     };
-  };
 
   services.mpd.user = "sean";
   systemd.services.mpd.environment = {
@@ -233,6 +246,7 @@
   # List packages installed in system profile. To search, run:
   # $ nix search wget
   environment.systemPackages = with pkgs; [
+    filezilla
     polkit
     wireplumber
     gvfs
@@ -244,6 +258,7 @@
     # native wayland support (unstable)
     wineWowPackages.waylandFull
     polkit_gnome
+    vlc
   ];
 
   programs.thunar.enable = true;
@@ -255,18 +270,14 @@
   services.gvfs.enable = true;
   services.tumbler.enable = true;
 
+  services.plex = {
+    enable = true;
+    openFirewall = true;
+    
+  };
+
   services.blueman.enable = true;
 
-  environment.etc = {
-    "wireplumber/bluetooth.lua.d/51-bluez-config.lua".text = ''
-      		bluez_monitor.properties = {
-      			["bluez5.enable-sbc-xq"] = true,
-      			["bluez5.enable-msbc"] = true,
-      			["bluez5.enable-hw-volume"] = true,
-      			["bluez5.headset-roles"] = "[ hsp_hs hsp_ag hfp_hf hfp_ag ]"
-      		}
-      	'';
-  };
 
   # Some programs need SUID wrappers, can be configured further or are
   # started in user sessions.
@@ -282,7 +293,7 @@
   # services.openssh.enable = true;
 
   # Open ports in the firewall.
-  # networking.firewall.allowedTCPPorts = [ ... ];
+  networking.firewall.allowedTCPPorts = [ 8010 ];
   # networking.firewall.allowedUDPPorts = [ ... ];
   # Or disable the firewall altogether.
   # networking.firewall.enable = false;
