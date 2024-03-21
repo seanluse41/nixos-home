@@ -13,7 +13,6 @@
     ./kitty.nix
     ./cursor.nix
     ./gammastep.nix
-    ./swayidle.nix
     ./mpv.nix
     ./chromium.nix
     ./mpd.nix
