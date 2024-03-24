@@ -13,12 +13,12 @@
     gtk-layer-shell = true;
     height = 34;
     modules-left = [
-        "clock"
         "custom/weather"
         "hyprland/workspaces"
     ];
     modules-center = [
         "hyprland/window"
+	"clock"
     ];
     modules-right = [
         "tray"
@@ -77,10 +77,12 @@
         icon-size = 13;
         spacing = 10;
     };
-    clock = {
-        format = "{: %R   %d/%m}";
-        tooltip-format = "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>";
-    };
+      clock = { 
+	format = " <span>{:%H:%M}</span>"; 
+    tooltip = true;
+	tooltip-format = "<big>{:%A, %d.%B %Y }</big><tt><small>{calendar}</small></tt>";
+      };
+
     wireplumber = {
         format = "{volume}% {icon}";
         format-muted = "";
