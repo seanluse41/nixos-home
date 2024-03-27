@@ -24,7 +24,7 @@
         "tray"
 	"temperature"
         "custom/updates"
-#        "hyprland/language"
+	"hyprland/language"
         "wireplumber"
     ];
 
@@ -68,7 +68,7 @@
     };
 
     hyprland-language = {
-	format = "{}";
+	format = "{short}";
 	format-ja = "ENG";
 	format-mozc = "あ";
     };

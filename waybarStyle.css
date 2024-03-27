@@ -31,7 +31,6 @@ window#waybar.chromium {
     border-radius: 8px;
     margin: 4px 2px;
     padding: 0px 4px;
-    margin-left: 20px;
 }
 
 #workspaces button:hover {
