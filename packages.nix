@@ -53,7 +53,7 @@
     nodejs
     mpc-cli
     jackett
-#    retroarchFull
+    #retroarchFull
     wf-recorder
     p7zip
     appimage-run

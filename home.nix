@@ -1,7 +1,6 @@
 { config, pkgs, ... }:
 
 {
-
   nixpkgs.config = {
     allowUnfree = true;
   };
@@ -25,6 +24,7 @@
     ./packages.nix
     ./xdgMimeApps.nix
     ./ripgrep.nix
+    ./joplin.nix
   ];
   home.username = "sean";
   home.homeDirectory = "/home/sean";
