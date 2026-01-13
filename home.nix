@@ -8,4 +8,5 @@
 	home.username = "sean";
 	home.homeDirectory = "/home/sean";
 	home.stateVersion = "25.11";
+	home.file."games".source = config.lib.file.mkOutOfStoreSymlink "/mnt/data/games";
 }
