@@ -11,6 +11,7 @@
 
   # GameMode
   programs.gamemode.enable = true;
+  programs.gamescope.enable = true;
 
   # Wine dependencies
   hardware.graphics = {
@@ -22,6 +23,10 @@
   environment.systemPackages = with pkgs; [
     wine-staging
     winetricks
-    heroic
+    (heroic.override {
+      extraPkgs = pkgs: [
+        gamescope
+      ];
+    })
   ];
 }

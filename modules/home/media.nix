@@ -23,6 +23,7 @@
     qbittorrent
     filezilla
     prowlarr
+    ani-cli
   ];
 
   services.mpdris2.enable = true;
