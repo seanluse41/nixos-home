@@ -40,6 +40,9 @@
   # Enable networking
   networking.networkmanager.enable = true;
 
+  # Udev
+  services.udev.packages = [ pkgs.dolphin-emu ];
+
   # Set your time zone.
   time.timeZone = "Asia/Tokyo";
 
