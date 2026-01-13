@@ -7,6 +7,7 @@
     zip
     unrar
     fastfetch
+    nixfmt
   ];
 
 programs.fastfetch = {

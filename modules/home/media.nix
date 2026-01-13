@@ -22,6 +22,7 @@
     # File sharing
     qbittorrent
     filezilla
+    prowlarr
   ];
 
   services.mpdris2.enable = true;
@@ -63,6 +64,20 @@ services.mpd = {
       visualizer_type = "spectrum";
       visualizer_look = "●●";
       visualizer_spectrum_smooth_look = "no";
+    };
+  };
+
+  systemd.user.services.prowlarr = {
+    Unit = {
+      Description = "Prowlarr";
+      After = [ "network.target" ];
+    };
+    Service = {
+      ExecStart = "${pkgs.prowlarr}/bin/Prowlarr -nobrowser -data=%h/.config/Prowlarr";
+      Restart = "on-failure";
+    };
+    Install = {
+      WantedBy = [ "default.target" ];
     };
   };
 }

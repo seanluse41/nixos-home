@@ -83,6 +83,11 @@
   environment.systemPackages = with pkgs; [
   ];
 
+  services.flaresolverr = {
+    enable = true;
+    openFirewall = true;
+  };
+
   # Enable the OpenSSH daemon.
   # services.openssh.enable = true;
 
