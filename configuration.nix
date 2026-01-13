@@ -88,6 +88,8 @@
     openFirewall = true;
   };
 
+  services.mullvad-vpn.enable = true;
+
   # Enable the OpenSSH daemon.
   # services.openssh.enable = true;
 

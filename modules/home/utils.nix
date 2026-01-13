@@ -8,6 +8,7 @@
     unrar
     fastfetch
     nixfmt
+    mullvad-vpn
   ];
 
 programs.fastfetch = {
