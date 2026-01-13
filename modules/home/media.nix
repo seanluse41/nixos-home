@@ -8,10 +8,9 @@
     yt-dlp
     audacity
     blender
+    mpc
        
     # Screenshot/Recording
-    grim
-    slurp
     wf-recorder
     swappy
     
@@ -24,6 +23,8 @@
     qbittorrent
     filezilla
   ];
+
+  services.mpdris2.enable = true;
 
   programs.mpv = {
     enable = true;
