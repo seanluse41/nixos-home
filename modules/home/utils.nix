@@ -1,4 +1,4 @@
-# modules/home/media.nix
+# modules/home/utils.nix
 { config, pkgs, ... }:
 
 {
@@ -32,5 +32,20 @@ programs.fastfetch = {
         "disk"
       ];
     };
+  };
+
+  programs.chromium = {
+    enable = true;
+    package = pkgs.ungoogled-chromium;
+    commandLineArgs = [
+      "--enable-features=VaapiVideoDecoder"  # hardware video decode
+      "--disable-features=UseChromeOSDirectVideoDecoder"
+    ];
+    extensions = [
+      { id = "pnmaklegiibbioifkmfkgpfnmdehdfan"; } # 10ten Japanese Reader
+      { id = "cjpalhdlnbpafiamejdnhcphjbkeiagm"; } # uBlock Origin
+      { id = "mnjggcdmjocbbbhaepdhchncahnbgone"; } # SponsorBlock
+      { id = "nngceckbapebfimnlniiiahkandclblb"; } # Bitwarden
+    ];
   };
 }
