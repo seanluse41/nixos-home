@@ -4,6 +4,7 @@
 		./modules/home/emulators.nix
 		./modules/home/media.nix
 		./modules/home/development.nix
+		./modules/home/utils.nix
 	];
 	home.username = "sean";
 	home.homeDirectory = "/home/sean";
