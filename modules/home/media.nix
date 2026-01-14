@@ -11,8 +11,7 @@
     mpc
        
     # Screenshot/Recording
-    wf-recorder
-    swappy
+    kooha
     
     # Communication
     slack
