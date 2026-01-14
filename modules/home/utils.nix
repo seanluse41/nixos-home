@@ -11,6 +11,10 @@
     mullvad-vpn
   ];
 
+  services.flatpak.packages = [
+    "com.github.tchx84.Flatseal"
+  ];
+
 programs.fastfetch = {
     enable = true;
     settings = {
