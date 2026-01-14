@@ -11,9 +11,10 @@
       url = "github:Mic92/sops-nix";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+    nix-flatpak.url = "github:gmodena/nix-flatpak";
   };
   
-  outputs = { nixpkgs, home-manager, sops-nix, ... }: {
+  outputs = { nixpkgs, home-manager, sops-nix, nix-flatpak, ... }: {
     nixosConfigurations.nixos = nixpkgs.lib.nixosSystem {
       system = "x86_64-linux";
       modules = [
@@ -24,6 +25,9 @@
           home-manager.useGlobalPkgs = true;
           home-manager.useUserPackages = true;
           home-manager.users.sean = import ./home.nix;
+	  home-manager.shareModules = [
+	    nix-flatpak.homeManagerModules.nix-flatpak
+	  ];
         }
       ];
     };

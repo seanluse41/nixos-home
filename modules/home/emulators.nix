@@ -12,4 +12,8 @@
     fceux
 #    snes9x-gtk
   ];
+  services.flatpak.packages = [
+    "net.duckstation.DuckStation"
+    "com.snes9x.Snes9x"
+  ];
 }

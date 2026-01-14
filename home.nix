@@ -12,6 +12,16 @@
   home.stateVersion = "25.11";
   home.file."games".source = config.lib.file.mkOutOfStoreSymlink "/mnt/data/games";
 
+  services.flatpak = {
+    remotes = {
+      "flathub" = "https://flathub.org/repo/flathub.flatpakrepo";
+    };
+    update.auto = {
+      enable = true;
+      onCalendar = "weekly";
+    };
+  };
+
   xdg.configFile."fcitx5/profile".text = ''
     [Groups/0]
     Name=Default
