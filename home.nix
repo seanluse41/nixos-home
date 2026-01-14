@@ -12,6 +12,31 @@
   home.stateVersion = "25.11";
   home.file."games".source = config.lib.file.mkOutOfStoreSymlink "/mnt/data/games";
 
+  home.pointerCursor = {
+    gtk.enable = true;
+    x11.enable = true;
+    name = "Breeze_Light";
+    size = 24;
+    package = pkgs.kdePackages.breeze;
+  };
+
+  home.sessionVariables = {
+    XCURSOR_THEME = "Breeze_Light";
+    XCURSOR_SIZE = "24";
+  };
+
+  gtk.cursorTheme = {
+    name = "Breeze_Light";
+    size = 24;
+  };
+
+  dconf.settings = {
+    "org/gnome/desktop/interface" = {
+      cursor-theme = "Breeze_Light";
+      cursor-size = 24;
+    };
+  };
+
   services.flatpak = {
     remotes = [
       {
@@ -22,6 +47,11 @@
     update.auto = {
       enable = true;
       onCalendar = "weekly";
+    };
+    overrides = {
+      global = {
+        Context.filesystems = [ "/nix/store:ro" ];
+      };
     };
   };
 
