@@ -6,6 +6,7 @@
 	./hardware-configuration.nix
 	./modules/system/japanese.nix
 	./modules/system/gaming.nix
+  ./modules/system/wiimote.nix
     ];
 
   # Flakes
