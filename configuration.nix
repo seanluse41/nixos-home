@@ -1,21 +1,23 @@
 { config, pkgs, ... }:
 
 {
-  imports =
-    [
-	./hardware-configuration.nix
-	./modules/system/japanese.nix
-	./modules/system/gaming.nix
-  ./modules/system/wiimote.nix
-    ];
+  imports = [
+    ./hardware-configuration.nix
+    ./modules/system/japanese.nix
+    ./modules/system/gaming.nix
+    ./modules/system/wiimote.nix
+  ];
 
   # Flakes
-  nix.settings.experimental-features = ["nix-command" "flakes"];
+  nix.settings.experimental-features = [
+    "nix-command"
+    "flakes"
+  ];
 
   # SOPS secrets management
   sops.defaultSopsFile = ./secrets/secrets.yaml;
   sops.age.keyFile = "/var/lib/sops-nix/key.txt";
-  sops.secrets.luks-password = {};
+  sops.secrets.luks-password = { };
 
   # Crypttab for second encrypted drive (1TB nvme)
   environment.etc."crypttab".text = ''
@@ -67,11 +69,36 @@
     variant = "";
   };
 
+  hardware.bluetooth = {
+    enable = true;
+    powerOnBoot = true;
+    settings = {
+      General = {
+        # Shows battery charge of connected devices on supported
+        # Bluetooth adapters. Defaults to 'false'.
+        Experimental = true;
+        # When enabled other devices can connect faster to us, however
+        # the tradeoff is increased power consumption. Defaults to
+        # 'false'.
+        FastConnectable = true;
+      };
+      Policy = {
+        # Enable all controllers when they are found. This includes
+        # adapters present on start as well as adapters that are plugged
+        # in later on. Defaults to 'true'.
+        AutoEnable = true;
+      };
+    };
+  };
+
   users.users.sean = {
     isNormalUser = true;
     description = "sean";
-    extraGroups = [ "networkmanager" "wheel" ];
-    packages = with pkgs; [];
+    extraGroups = [
+      "networkmanager"
+      "wheel"
+    ];
+    packages = with pkgs; [ ];
   };
 
   # Allow unfree packages

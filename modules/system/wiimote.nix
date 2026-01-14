@@ -14,14 +14,4 @@
   environment.systemPackages = with pkgs; [
     xwiimote
   ];
-  
-  # X11 input driver configuration
-  services.xserver.inputClassSections = [
-    ''
-      Identifier "Nintendo Wii Remote"
-      MatchProduct "Nintendo Wii Remote"
-      MatchDevicePath "/dev/input/event*"
-      Driver "xwiimote"
-    ''
-  ];
 }
