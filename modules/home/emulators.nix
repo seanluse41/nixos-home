@@ -11,6 +11,8 @@
 #    duckstation
     fceux
 #    snes9x-gtk
+    _2ship2harkinian
+    shipwright
   ];
   services.flatpak.packages = [
     "org.duckstation.DuckStation"

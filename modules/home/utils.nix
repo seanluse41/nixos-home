@@ -9,6 +9,7 @@
     fastfetch
     nixfmt
     mullvad-vpn
+    appimage-run
   ];
 
   services.flatpak.packages = [
