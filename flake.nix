@@ -25,7 +25,7 @@
           home-manager.useGlobalPkgs = true;
           home-manager.useUserPackages = true;
           home-manager.users.sean = import ./home.nix;
-	  home-manager.shareModules = [
+	  home-manager.sharedModules = [
 	    nix-flatpak.homeManagerModules.nix-flatpak
 	  ];
         }

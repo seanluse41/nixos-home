@@ -13,9 +13,12 @@
   home.file."games".source = config.lib.file.mkOutOfStoreSymlink "/mnt/data/games";
 
   services.flatpak = {
-    remotes = {
-      "flathub" = "https://flathub.org/repo/flathub.flatpakrepo";
-    };
+    remotes = [
+      {
+        name = "flathub";
+        location = "https://flathub.org/repo/flathub.flatpakrepo";
+      }
+    ];
     update.auto = {
       enable = true;
       onCalendar = "weekly";
