@@ -32,6 +32,13 @@
       bradlc.vscode-tailwindcss
       #anthropic.claude-code
     ];
+    profiles.default.userSettings = {
+      "editor.quickSuggestions" = {
+        strings = "on";
+      };
+      # fails to default theme if not installed manually
+      "workbench.colorTheme" = "Shades of Purple";
+    };
   };
 
   programs.git = {
