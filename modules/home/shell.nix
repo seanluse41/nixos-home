@@ -8,6 +8,7 @@
       #raspi32 = "ssh sean@192.168.50.";
       raspi256 = "ssh sean@192.168.50.191";
       ssd = "cd /mnt/data/";
+      kintone = "nix develop ~/nixConfig#kintone";
     };
     initExtra = ''
       fastfetch

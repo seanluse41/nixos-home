@@ -38,6 +38,7 @@
       };
       # fails to default theme if not installed manually
       "workbench.colorTheme" = "Shades of Purple";
+      "explorer.confirmDragAndDrop": false
     };
   };
 
