@@ -20,6 +20,22 @@
         "type": "github"
       }
     },
+    "kintone-shell": {
+      "inputs": {
+        "nixpkgs": [
+          "nixpkgs"
+        ]
+      },
+      "locked": {
+        "path": "./shells/kintone",
+        "type": "path"
+      },
+      "original": {
+        "path": "./shells/kintone",
+        "type": "path"
+      },
+      "parent": []
+    },
     "nix-flatpak": {
       "locked": {
         "lastModified": 1768119771,
@@ -54,6 +70,7 @@
     "root": {
       "inputs": {
         "home-manager": "home-manager",
+        "kintone-shell": "kintone-shell",
         "nix-flatpak": "nix-flatpak",
         "nixpkgs": "nixpkgs",
         "sops-nix": "sops-nix"
