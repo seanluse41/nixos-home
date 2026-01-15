@@ -7,9 +7,12 @@
       #homeServer = "ssh sean@192.168.50.232 -p 2283";
       #raspi32 = "ssh sean@192.168.50.";
       raspi256 = "ssh sean@192.168.50.191";
+      ssd = "cd /mnt/data/";
     };
     initExtra = ''
       fastfetch
+      export NPM_CONFIG_PREFIX="$HOME/.npm-global"
+      export PATH="$NPM_CONFIG_PREFIX/bin:$PATH"
     '';
   };
 }

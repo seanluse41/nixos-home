@@ -64,6 +64,7 @@ services.mpd = {
       visualizer_type = "spectrum";
       visualizer_look = "●●";
       visualizer_spectrum_smooth_look = "no";
+      startup_screen = "visualizer";
     };
   };
 
