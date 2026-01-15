@@ -14,6 +14,7 @@
     # Tools
     gh
     git-lfs
+    claude-code
     # Design
     blender
     # Cli
