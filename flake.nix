@@ -41,5 +41,8 @@
           }
         ];
       };
+      devShells.x86_64-linux = {
+        kintone = import ./shells/kintone.nix { pkgs = nixpkgs.legacyPackages.x86_64-linux; };
+      };
     };
 }
