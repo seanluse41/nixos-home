@@ -14,18 +14,21 @@
     "flakes"
   ];
 
+  # Garbage and Store Optimization
   nix.gc = {
     automatic = true;
     dates = "weekly";
     options = "--delete-older-than 30d";
   };
 
+  nix.settings.auto-optimise-store = true;
+
   # SOPS secrets management
   sops.defaultSopsFile = ./secrets/secrets.yaml;
   sops.age.keyFile = "/var/lib/sops-nix/key.txt";
   sops.secrets.luks-password = { };
 
-  # Crypttab for second encrypted drive (1TB nvme)
+  # Crypttab for ssd
   environment.etc."crypttab".text = ''
     cryptdata /dev/disk/by-uuid/05ac586c-45bc-4a9f-b0cc-96dc8b85b395 ${config.sops.secrets.luks-password.path}
   '';
@@ -36,11 +39,11 @@
     fsType = "ext4";
   };
 
-  # Bootloader.
+  # Bootloader
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
 
-  # Use latest kernel.
+  # Use latest kernel
   boot.kernelPackages = pkgs.linuxPackages_latest;
 
   networking.hostName = "nixos"; # Define your hostname.
