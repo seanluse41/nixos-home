@@ -14,6 +14,12 @@
     "flakes"
   ];
 
+  nix.gc = {
+    automatic = true;
+    dates = "weekly";
+    options = "--delete-older-than 30d";
+  };
+
   # SOPS secrets management
   sops.defaultSopsFile = ./secrets/secrets.yaml;
   sops.age.keyFile = "/var/lib/sops-nix/key.txt";
@@ -74,7 +80,7 @@
     powerOnBoot = true;
     settings = {
       General = {
-	Enable = "Source,Sink,Media,Socket";
+        Enable = "Source,Sink,Media,Socket";
         Experimental = true;
         FastConnectable = true;
       };
