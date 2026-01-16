@@ -14,6 +14,7 @@
         nativeBuildInputs = with pkgs; [
           pkg-config
           gobject-introspection
+          nodejs
         ];
         
         buildInputs = with pkgs; [
@@ -30,6 +31,16 @@
           webkitgtk_4_1
           openssl
         ];
+        
+        shellHook = ''
+          export NPM_CONFIG_PREFIX="$PWD/.npm-packages"
+          export PATH="$NPM_CONFIG_PREFIX/bin:$PATH"
+          
+          if [ ! -f ".npm-packages/.installed" ]; then
+            npm install -g create-tauri-app
+            touch .npm-packages/.installed
+          fi
+        '';
       };
     };
 }
