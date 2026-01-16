@@ -19,6 +19,7 @@
     blender
     # Cli
     stripe-cli
+    cargo-tauri
   ];
 
   programs.vscode = {
