@@ -11,6 +11,7 @@
     mullvad-vpn
     appimage-run
     xdg-utils
+    system-config-printer
   ];
 
   services.flatpak.packages = [
