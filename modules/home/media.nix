@@ -13,11 +13,6 @@
     # Screenshot/Recording
     kooha
     
-    # Communication
-    slack
-    thunderbird
-    zoom-us
-    
     # File sharing
     qbittorrent
     filezilla

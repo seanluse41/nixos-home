@@ -6,6 +6,7 @@
     ./modules/home/development.nix
     ./modules/home/utils.nix
     ./modules/home/shell.nix
+    ./modules/home/communications.nix
   ];
   home.username = "sean";
   home.homeDirectory = "/home/sean";
