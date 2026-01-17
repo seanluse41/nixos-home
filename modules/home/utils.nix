@@ -10,6 +10,7 @@
     nixfmt
     mullvad-vpn
     appimage-run
+    xdg-utils
   ];
 
   services.flatpak.packages = [
