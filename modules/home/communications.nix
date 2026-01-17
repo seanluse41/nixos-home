@@ -29,6 +29,7 @@
       };
       userName = "seanluse41@gmail.com";
       thunderbird = {
+        enable = true;
         profiles = ["default"];
         settings = id: {
           "mail.server.server_${id}.authMethod" = 10;
@@ -51,7 +52,10 @@
         tls.enable = true;
       };
       userName = "admin@seanbase.com";
-      thunderbird.profiles = ["default"];
+      thunderbird = {
+        enable = true;
+        profiles = ["default"];
+      };
     };
 
     "chudstop" = {
@@ -68,7 +72,10 @@
         tls.enable = true;
       };
       userName = "chudstop@cock.li";
-      thunderbird.profiles = ["default"];
+      thunderbird = {
+        enable = true;
+        profiles = ["default"];
+      };
     };
   };
 
