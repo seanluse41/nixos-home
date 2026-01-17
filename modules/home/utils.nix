@@ -12,6 +12,7 @@
     appimage-run
     xdg-utils
     system-config-printer
+    erdtree
   ];
 
   services.flatpak.packages = [

@@ -10,6 +10,7 @@
       ssd = "cd /mnt/data/";
       kintoneShell = "nix develop ~/nixConfig#kintone";
       tauriShell = "nix develop ~/nixConfig#tauri";
+      tree = "erd -H .";
     };
     initExtra = ''
       fastfetch

@@ -28,7 +28,13 @@
         tls.enable = true;
       };
       userName = "seanluse41@gmail.com";
-      thunderbird.profiles = [ "default" ];
+      thunderbird = {
+        profiles = ["default"];
+        settings = id: {
+          "mail.server.server_${id}.authMethod" = 10;
+          "mail.smtpserver.smtp_${id}.authMethod" = 10;
+        };
+      };
     };
 
     "seanbase" = {
@@ -45,7 +51,7 @@
         tls.enable = true;
       };
       userName = "admin@seanbase.com";
-      thunderbird.profiles = [ "default" ];
+      thunderbird.profiles = ["default"];
     };
 
     "chudstop" = {
@@ -62,7 +68,7 @@
         tls.enable = true;
       };
       userName = "chudstop@cock.li";
-      thunderbird.profiles = [ "default" ];
+      thunderbird.profiles = ["default"];
     };
   };
 
