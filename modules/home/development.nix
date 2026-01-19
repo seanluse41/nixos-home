@@ -41,6 +41,8 @@
       "workbench.colorTheme" = "Shades of Purple";
       "explorer.confirmDragAndDrop" = false;
       "workbench.startupEditor" = "none";
+      "explorer.confirmDelete" = false;
+      "svelte.ask-to-enable-ts-plugin" = false;
     };
   };
 
