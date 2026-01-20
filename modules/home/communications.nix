@@ -38,25 +38,25 @@
       };
     };
 
-    "seanbase" = {
-      address = "admin@seanbase.com";
-      realName = "Sean";
-      imap = {
-        host = "imap.porkbun.com";
-        port = 993;
-        tls.enable = true;
-      };
-      smtp = {
-        host = "smtp.porkbun.com";
-        port = 465;
-        tls.enable = true;
-      };
-      userName = "admin@seanbase.com";
-      thunderbird = {
-        enable = true;
-        profiles = ["default"];
-      };
-    };
+#    "seanbase" = {
+#      address = "admin@seanbase.com";
+#      realName = "Sean";
+#      imap = {
+#        host = "imap.porkbun.com";
+#        port = 993;
+#        tls.enable = true;
+#      };
+#      smtp = {
+#        host = "smtp.porkbun.com";
+#        port = 465;
+#        tls.enable = true;
+#      };
+#      userName = "admin@seanbase.com";
+#      thunderbird = {
+#        enable = true;
+#        profiles = ["default"];
+#      };
+#    };
 
     "chudstop" = {
       address = "chudstop@cock.li";

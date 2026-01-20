@@ -13,6 +13,7 @@
     xdg-utils
     system-config-printer
     erdtree
+    nvd
   ];
 
   services.flatpak.packages = [
