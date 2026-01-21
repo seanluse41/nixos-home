@@ -8,7 +8,6 @@
     unrar
     fastfetch
     nixfmt
-    mullvad-vpn
     appimage-run
     xdg-utils
     system-config-printer

@@ -6,6 +6,7 @@
     godot
     # Android
     android-studio
+    android-tools
     flutter
     # Languages
     rustup

@@ -6,6 +6,7 @@
     ./modules/system/japanese.nix
     ./modules/system/gaming.nix
     ./modules/system/wiimote.nix
+    ./modules/system/services.nix
   ];
 
   # Flakes
@@ -122,13 +123,6 @@
 
   environment.systemPackages = with pkgs; [
   ];
-
-  services.flaresolverr = {
-    enable = true;
-    openFirewall = true;
-  };
-
-  services.mullvad-vpn.enable = true;
 
   # Enable the OpenSSH daemon.
   # services.openssh.enable = true;
