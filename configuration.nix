@@ -15,6 +15,12 @@
     "flakes"
   ];
 
+  # rebuild speed
+  nix.settings = {
+    max-jobs = 8;
+    cores = 0; #auto
+  };
+
   # Garbage and Store Optimization
   nix.gc = {
     automatic = true;
