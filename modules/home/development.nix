@@ -63,6 +63,7 @@
       "editor.stickyScroll.enabled" = false;
       "terminal.integrated.initialHint" = false;
       "git.openRepositoryInParentFolders" = "never";
+      "explorer.confirmPasteNative" = false;
     };
   };
 
