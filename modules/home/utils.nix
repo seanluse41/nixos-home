@@ -56,6 +56,7 @@ programs.fastfetch = {
       { id = "cjpalhdlnbpafiamejdnhcphjbkeiagm"; } # uBlock Origin
       { id = "mnjggcdmjocbbbhaepdhchncahnbgone"; } # SponsorBlock
       { id = "nngceckbapebfimnlniiiahkandclblb"; } # Bitwarden
+      { id = "ophjlpahpchlmihnnnihgmmeilfjmjjc"; } # LINE
     ];
   };
 }
