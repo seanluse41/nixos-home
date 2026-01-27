@@ -13,6 +13,8 @@
 #    snes9x-gtk
     _2ship2harkinian
     shipwright
+    nxengine-evo
+    easyrpg-player
   ];
   services.flatpak.packages = [
     "org.duckstation.DuckStation"
