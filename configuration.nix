@@ -21,6 +21,8 @@
     cores = 0; #auto
   };
 
+  documentation.enable = false;
+
   # Garbage and Store Optimization
   nix.gc = {
     automatic = true;
