@@ -1,0 +1,3 @@
+[submodule "homeServer"]
+	path = homeServer
+	url = https://github.com/seanluse41/nixServer.git
