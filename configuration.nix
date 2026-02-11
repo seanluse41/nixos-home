@@ -7,6 +7,7 @@
     ./modules/system/gaming.nix
     ./modules/system/wiimote.nix
     ./modules/system/services.nix
+    ./modules/system/tailscale.nix
   ];
 
   # Flakes
