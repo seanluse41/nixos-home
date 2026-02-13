@@ -1,19 +1,21 @@
 { config, pkgs, ... }:
+let
+  consts = import ../../homeServer/consts.nix;
+in
 {
   programs.bash = {
     enable = true;
     shellAliases = {
       rebuild = "sudo nixos-rebuild switch --flake ~/nixConfig#nixos && nvd diff /run/booted-system /run/current-system";
-      rebuildServer = "nixos-rebuild switch --flake ~/nixConfig/homeServer#home-server --target-host home-server --ask-sudo-password";
-      homeServer = "ssh sean@192.168.50.110";
-      photoFrame = "ssh sean@192.168.50.139";
-      pi-hole = "ssh sean@192.168.50.84";
-      #raspi256 = "ssh sean@192.168.50.191";
+      homeServer = "ssh ${consts.user}@${consts.network.homeServer}";
+      photoFrame = "ssh ${consts.user}@${consts.network.photoFrame}";
+      pi-hole = "ssh ${consts.user}@${consts.network.piHole}";
       ssd = "cd /mnt/data/";
       kintoneShell = "nix develop ~/nixConfig#kintone";
       tauriShell = "nix develop ~/nixConfig#tauri";
       tree = "erd -H .";
-      rebootServer = "echo 'REBOOT' | nc -u 192.168.50.110 9999";
+      rebuildServer = "nixos-rebuild switch --flake ~/nixConfig/homeServer#home-server --target-host ${consts.user}@${consts.network.homeServer} --ask-sudo-password";
+      rebootServer = "echo 'REBOOT' | nc -u ${consts.network.homeServer} ${toString consts.ports.udpReboot}";
     };
     initExtra = ''
       fastfetch
