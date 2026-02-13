@@ -38,6 +38,9 @@
   sops.age.keyFile = "/var/lib/sops-nix/key.txt";
   sops.secrets.luks-password = { };
 
+  # server keys
+  nix.settings.secret-key-files = [ "/var/lib/sops-nix/signing-key.sec" ];
+
   # Crypttab for ssd
   environment.etc."crypttab".text = ''
     cryptdata /dev/disk/by-uuid/05ac586c-45bc-4a9f-b0cc-96dc8b85b395 ${config.sops.secrets.luks-password.path}
