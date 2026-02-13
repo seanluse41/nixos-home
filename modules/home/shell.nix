@@ -1,6 +1,6 @@
 { config, pkgs, ... }:
 let
-  consts = import ../../homeServer/consts.nix;
+  consts = import ../../consts.nix;
 in
 {
   programs.bash = {
