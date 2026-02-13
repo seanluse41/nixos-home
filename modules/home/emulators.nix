@@ -4,7 +4,7 @@
 {
   home.packages = with pkgs; [
     dolphin-emu
-    melonDS
+    melonds
     pcsx2
     rpcs3
     ryubing
