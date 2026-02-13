@@ -4,6 +4,7 @@
     enable = true;
     shellAliases = {
       rebuild = "sudo nixos-rebuild switch --flake ~/nixConfig#nixos && nvd diff /run/booted-system /run/current-system";
+      rebuildServer = "nixos-rebuild switch --flake ~/nixConfig/homeServer#home-server --target-host sean@192.168.50.110 --use-remote-sudo";
       homeServer = "ssh sean@192.168.50.110";
       photoFrame = "ssh sean@192.168.50.139";
       pi-hole = "ssh sean@192.168.50.84";
