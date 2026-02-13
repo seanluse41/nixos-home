@@ -56,6 +56,17 @@
     };
   };
 
+  programs.ssh = {
+    enable = true;
+    matchBlocks = {
+      "home-server" = {
+        hostname = "192.168.50.110";
+        user = "sean";
+        identityFile = "~/.ssh/id_ed25519";
+      };
+    };
+  };
+
   xdg.configFile."fcitx5/profile".text = ''
     [Groups/0]
     Name=Default
