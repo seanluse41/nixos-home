@@ -13,6 +13,7 @@
       kintoneShell = "nix develop ~/nixConfig#kintone";
       tauriShell = "nix develop ~/nixConfig#tauri";
       tree = "erd -H .";
+      rebootServer = "echo 'REBOOT' | nc -u 192.168.50.110 9999";
     };
     initExtra = ''
       fastfetch
