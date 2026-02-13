@@ -15,7 +15,6 @@ in
       tauriShell = "nix develop ~/nixConfig#tauri";
       tree = "erd -H .";
       rebuildServer = "nixos-rebuild switch --flake ~/nixConfig/homeServer#home-server --target-host ${consts.user}@${consts.network.homeServer} --ask-sudo-password";
-      rebootServer = "echo 'REBOOT' | nc -u ${consts.network.homeServer} ${toString consts.ports.udpReboot}";
     };
     initExtra = ''
       fastfetch
