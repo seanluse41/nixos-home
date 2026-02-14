@@ -10,6 +10,7 @@ in
       homeServer = "ssh ${consts.user}@${consts.network.homeServer}";
       photoFrame = "ssh ${consts.user}@${consts.network.photoFrame}";
       pi-hole = "ssh ${consts.user}@${consts.network.piHole}";
+      raspi256 = "ssh ${consts.user}@${consts.network.pi256}";
       ssd = "cd /mnt/data/";
       kintoneShell = "nix develop ~/nixConfig#kintone";
       tauriShell = "nix develop ~/nixConfig#tauri";
