@@ -19,7 +19,7 @@
   # rebuild speed
   nix.settings = {
     max-jobs = 8;
-    cores = 0; #auto
+    cores = 0; # auto
   };
 
   documentation.enable = false;
@@ -50,6 +50,18 @@
   fileSystems."/mnt/data" = {
     device = "/dev/mapper/cryptdata";
     fsType = "ext4";
+  };
+
+  fileSystems."/mnt/media" = {
+    device = "192.168.50.110:/ssd/media";
+    fsType = "nfs";
+    options = [
+      "nfsvers=4"
+      "soft"
+      "timeo=30"
+      "noauto"
+      "x-systemd.automount"
+    ];
   };
 
   # Bootloader
