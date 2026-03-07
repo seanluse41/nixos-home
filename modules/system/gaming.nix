@@ -19,6 +19,12 @@
     enable32Bit = true;
   };
 
+  hardware.steam-hardware.enable = true;
+  hardware.xpadneo.enable = true;
+
+  boot.kernelModules = [ "hid_nintendo" "xpad" ];
+  boot.kernelParams = [ "usbhid.quirks=0x057e:0x2009:0x80000000" ];
+
   # Packages needed for gaming
   environment.systemPackages = with pkgs; [
     wine-staging
