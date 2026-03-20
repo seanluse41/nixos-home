@@ -13,6 +13,8 @@
     system-config-printer
     erdtree
     nvd
+    sops
+    age
   ];
 
   services.flatpak.packages = [

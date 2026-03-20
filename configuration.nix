@@ -34,7 +34,7 @@
   nix.settings.auto-optimise-store = true;
 
   # SOPS secrets management
-  sops.defaultSopsFile = ./secrets/secrets.yaml;
+sops.defaultSopsFile = ./secrets/secrets.yaml;
   sops.age.keyFile = "/var/lib/sops-nix/key.txt";
   sops.secrets.luks-password = { };
 
@@ -70,6 +70,26 @@
 
   # Use latest kernel
   boot.kernelPackages = pkgs.linuxPackages_latest;
+
+  # large mem pages for rpsc3
+  boot.kernel.sysctl = {
+    "vm.unprivileged_userfaultfd" = 1;
+  };
+
+  security.pam.loginLimits = [
+    {
+      domain = "*";
+      type = "soft";
+      item = "memlock";
+      value = "unlimited";
+    }
+    {
+      domain = "*";
+      type = "hard";
+      item = "memlock";
+      value = "unlimited";
+    }
+  ];
 
   networking.hostName = "nixos"; # Define your hostname.
   # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.

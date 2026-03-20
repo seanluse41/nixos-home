@@ -17,6 +17,9 @@ in
       tree = "erd -H .";
       rebuildServer = "nixos-rebuild switch --flake ~/nixConfig/homeServer#home-server --target-host ${consts.user}@${consts.network.homeServer} --ask-sudo-password";
     };
+    sessionVariables = {
+      SOPS_AGE_KEY_FILE = "/var/lib/sops-nix/key.txt";
+    };
     initExtra = ''
       fastfetch
       export NPM_CONFIG_PREFIX="$HOME/.npm-global"

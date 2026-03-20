@@ -21,6 +21,8 @@
     # Cli
     stripe-cli
     cargo-tauri
+    awscli2
+    aws-sam-cli
   ];
 
   programs.vscode = {
@@ -64,6 +66,7 @@
       "terminal.integrated.initialHint" = false;
       "git.openRepositoryInParentFolders" = "never";
       "explorer.confirmPasteNative" = false;
+      "terminal.integrated.stickyScroll.enabled" = false;
     };
   };
 
