@@ -1,5 +1,11 @@
 # modules/home/development.nix
-{ config, pkgs, ... }:
+{
+  config,
+  pkgs,
+  lib,
+  sops,
+  ...
+}:
 {
   home.packages = with pkgs; [
     # Godot
@@ -87,8 +93,8 @@
     mkdir -p ~/.aws
     cat > ~/.aws/credentials << EOF
     [default]
-    aws_access_key_id=$(cat ${config.sops.secrets.aws-access-key-id.path})
-    aws_secret_access_key=$(cat ${config.sops.secrets.aws-secret-access-key.path})
+    aws_access_key_id=$(cat /run/secrets/aws-access-key-id)
+    aws_secret_access_key=$(cat /run/secrets/aws-secret-access-key)
     EOF
     chmod 600 ~/.aws/credentials
   '';
