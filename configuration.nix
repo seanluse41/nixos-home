@@ -34,9 +34,15 @@
   nix.settings.auto-optimise-store = true;
 
   # SOPS secrets management
-sops.defaultSopsFile = ./secrets/secrets.yaml;
+  sops.defaultSopsFile = ./secrets/secrets.yaml;
   sops.age.keyFile = "/var/lib/sops-nix/key.txt";
   sops.secrets.luks-password = { };
+  sops.secrets.aws-access-key-id = {
+    owner = "sean";
+  };
+  sops.secrets.aws-secret-access-key = {
+    owner = "sean";
+  };
 
   # server keys
   nix.settings.secret-key-files = [ "/var/lib/sops-nix/signing-key.sec" ];

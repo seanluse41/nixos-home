@@ -81,4 +81,15 @@
     enable = true;
     gitCredentialHelper.enable = true;
   };
+
+  # AWS CLI login
+  home.activation.awsCredentials = lib.hm.dag.entryAfter [ "writeBoundary" ] ''
+    mkdir -p ~/.aws
+    cat > ~/.aws/credentials << EOF
+    [default]
+    aws_access_key_id=$(cat ${config.sops.secrets.aws-access-key-id.path})
+    aws_secret_access_key=$(cat ${config.sops.secrets.aws-secret-access-key.path})
+    EOF
+    chmod 600 ~/.aws/credentials
+  '';
 }
