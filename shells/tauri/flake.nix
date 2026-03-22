@@ -30,6 +30,7 @@
           pango
           webkitgtk_4_1
           openssl
+          desktop-file-utils
         ];
         
         shellHook = ''

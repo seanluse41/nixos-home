@@ -42,6 +42,8 @@
         tauri-apps.tauri-vscode
         svelte.svelte-vscode
         bradlc.vscode-tailwindcss
+        tamasfe.even-better-toml
+        redhat.vscode-yaml
         #anthropic.claude-code
       ]
       ++ pkgs.vscode-utils.extensionsFromVscodeMarketplace [
@@ -73,6 +75,7 @@
       "git.openRepositoryInParentFolders" = "never";
       "explorer.confirmPasteNative" = false;
       "terminal.integrated.stickyScroll.enabled" = false;
+      "redhat.telemetry.enabled" = false;
     };
   };
 
