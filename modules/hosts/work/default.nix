@@ -10,9 +10,13 @@
     modules = [
       inputs.sops-nix.homeManagerModules.sops
       { imports = with self.homeManagerModules; [
-          development
-          shell
+          packagesWork
+          vscode
+          gitWork
           kintone
+          shellWork
+          starship
+          fastfetch
           communications
           aerospace
       ]; }

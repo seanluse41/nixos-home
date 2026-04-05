@@ -1,6 +1,5 @@
 # modules/hosts/desktop/default.nix
-{ inputs, self, ... }:
-{
+{ inputs, self, ... }: {
   flake.nixosConfigurations.desktop = inputs.nixpkgs.lib.nixosSystem {
     system = "x86_64-linux";
     modules = [
@@ -18,9 +17,13 @@
             imports = with self.homeManagerModules; [
               emulators
               media
-              development
+              utilPackages
+              vscode
+              gitDesktop
+              aws
+              shellDesktop
+              fastfetch
               utils
-              shell
               communications
             ];
           };

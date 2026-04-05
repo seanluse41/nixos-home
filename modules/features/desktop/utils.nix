@@ -2,23 +2,11 @@
 { self, ... }: {
   flake.homeManagerModules.utils = { pkgs, ... }: {
     home.packages = with pkgs; [
-      unzip zip unrar fastfetch nixfmt appimage-run
+      unzip zip unrar nixfmt appimage-run
       xdg-utils system-config-printer erdtree nvd sops age
     ];
 
     services.flatpak.packages = [ "com.github.tchx84.Flatseal" ];
-
-    programs.fastfetch = {
-      enable = true;
-      settings = {
-        logo.source = "linux";
-        display.separator = ": ";
-        modules = [
-          "break" "title" "separator" "os" "kernel"
-          "uptime" "packages" "cpu" "gpu" "memory" "disk"
-        ];
-      };
-    };
 
     programs.chromium = {
       enable = true;

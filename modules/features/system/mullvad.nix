@@ -1,6 +1,6 @@
 # modules/features/system/mullvad.nix
 { self, ... }: {
-  flake.nixosModules.services = { ... }: {
+  flake.nixosModules.mullvad = { ... }: {
     services.mullvad-vpn.enable = true;
   };
 }
