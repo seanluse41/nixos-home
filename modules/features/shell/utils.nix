@@ -30,6 +30,7 @@
         stripe-cli
         cargo-tauri
         llmfit
+        llama-cpp
       ];
 
       programs.fastfetch = {

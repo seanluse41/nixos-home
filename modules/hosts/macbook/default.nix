@@ -10,18 +10,18 @@
       nixpkgs-hugo = inputs.nixpkgs-hugo;
       nixpkgs-sass = inputs.nixpkgs-sass;
     };
-    modules = [
+    modules = with self.homeModules; [
       inputs.mac-app-util.homeManagerModules.default
       inputs.sops-nix.homeManagerModules.sops
-      self.homeModules.aerospace
-      self.homeModules.starship
-      self.homeModules.zsh
-      self.homeModules.kintone
-      self.homeModules.vscode
-      self.homeModules.communications
-      self.homeModules.hugo
-      self.homeModules.packages
-      self.homeModules.utils
+      aerospace
+      starship
+      zsh
+      kintone
+      vscode
+      communications
+      hugo
+      packages
+      utils
       {
         home.username = "seanluse";
         home.homeDirectory = "/Users/sean";

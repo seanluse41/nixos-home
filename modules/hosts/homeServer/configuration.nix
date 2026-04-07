@@ -1,18 +1,5 @@
 { self, inputs, ... }: {
   flake.nixosModules.homeServerConfig = { pkgs, ... }: {
-    imports = [
-      self.nixosModules.homeServerHardware
-      self.nixosModules.tailscale
-      self.nixosModules.immich
-      self.nixosModules.borgBackup
-      self.nixosModules.uptimeKuma
-      self.nixosModules.nfs
-      self.nixosModules.jellyfin
-      self.nixosModules.transmission
-      inputs.sops-nix.nixosModules.sops
-      inputs.home-manager.nixosModules.default
-    ];
-
     sops = {
       defaultSopsFile = "${self}/secrets/secrets.yaml";
       age.keyFile = "/var/lib/sops-nix/key.txt";
@@ -76,12 +63,6 @@
       useUserPackages = true;
       backupFileExtension = "backup";
       users.sean = { ... }: {
-        imports = with self.homeModules; [
-          utils
-          bash
-          git
-        ];
-
         home.username = "sean";
         home.homeDirectory = "/home/sean";
         home.stateVersion = "24.11";

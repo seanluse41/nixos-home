@@ -169,23 +169,6 @@
             ...
           }:
           {
-            imports = with self.homeModules; [
-              chromium
-              bash
-              vscode
-              git
-              devPackages
-              mpd
-              ncmpcpp
-              mpv
-              mediaPackages
-              communications
-              emulators
-              utils
-              aws
-              kintone
-            ];
-
             home.username = "sean";
             home.homeDirectory = "/home/sean";
             home.stateVersion = "25.11";
