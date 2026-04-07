@@ -135,6 +135,7 @@
           communications
           emulators
           utils
+          aws
         ];
 
         home.username = "sean";
@@ -177,6 +178,7 @@
 
         programs.ssh = {
           enable = true;
+          enableDefaultConfig = false;
           matchBlocks."home-server" = {
             hostname = "192.168.50.110";
             user = "sean";
