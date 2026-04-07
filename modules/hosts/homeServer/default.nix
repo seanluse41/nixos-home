@@ -4,7 +4,6 @@
     system = "x86_64-linux";
     modules = with self.nixosModules; [
       homeServerConfig
-      homeServerHardware
       inputs.sops-nix.nixosModules.sops
       inputs.home-manager.nixosModules.default
       {
