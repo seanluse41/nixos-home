@@ -183,6 +183,7 @@
               emulators
               utils
               aws
+              kintone
             ];
 
             home.username = "sean";
