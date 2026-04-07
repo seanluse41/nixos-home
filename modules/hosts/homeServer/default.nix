@@ -14,6 +14,7 @@
         nfs
         jellyfin
         transmission
+        utils
       ])
       {
         home-manager.users.sean.imports = with self.homeModules; [
