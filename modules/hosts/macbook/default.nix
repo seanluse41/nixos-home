@@ -1,4 +1,5 @@
-{ self, inputs, ... }: {
+{ self, inputs, ... }:
+{
   flake.homeConfigurations."seanluse" = inputs.home-manager.lib.homeManagerConfiguration {
     pkgs = import inputs.nixpkgs {
       system = "aarch64-darwin";
@@ -19,6 +20,8 @@
       self.homeModules.vscode
       self.homeModules.communications
       self.homeModules.hugo
+      self.homeModules.packages
+      self.homeModules.utils
       {
         home.username = "seanluse";
         home.homeDirectory = "/Users/sean";
