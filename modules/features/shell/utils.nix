@@ -9,9 +9,6 @@
         unrar
         fastfetch
         nixfmt
-        appimage-run
-        xdg-utils
-        system-config-printer
         erdtree
         nvd
         sops
@@ -24,10 +21,6 @@
         btop
         docker-compose
         claude-code
-      ];
-
-      services.flatpak.packages = [
-        "com.github.tchx84.Flatseal"
       ];
 
       programs.fastfetch = {
