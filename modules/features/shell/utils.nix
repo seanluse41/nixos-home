@@ -16,6 +16,14 @@
         nvd
         sops
         age
+        wget
+        git
+        gh
+        vim
+        htop
+        btop
+        docker-compose
+        claude-code
       ];
 
       services.flatpak.packages = [
