@@ -1,5 +1,5 @@
 { self, inputs, ... }: {
-  flake.nixosModules.homeServerImmich = { pkgs, ... }: {
+  flake.nixosModules.immich = { pkgs, ... }: {
     services.immich = {
       enable = true;
       host = "0.0.0.0";

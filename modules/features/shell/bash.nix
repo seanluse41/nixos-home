@@ -15,7 +15,6 @@ in
           pi-hole = "ssh ${consts.user}@${consts.network.piHole}";
           raspi256 = "ssh ${consts.user}@${consts.network.pi256}";
           ssd = "cd /mnt/data/";
-          kintoneShell = "nix develop ~/nixConfig#kintone";
           tauriShell = "nix develop ~/nixConfig#tauri";
           tree = "erd -H .";
           rebuildServer = "sudo nixos-rebuild switch --flake ~/nixConfig#homeServer && nvd diff /run/booted-system /run/current-system";

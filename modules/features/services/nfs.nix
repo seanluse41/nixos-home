@@ -1,5 +1,5 @@
 { self, inputs, ... }: {
-  flake.nixosModules.homeServerNfs = { ... }: {
+  flake.nixosModules.nfs = { ... }: {
     services.nfs.server = {
       enable = true;
       exports = ''

@@ -1,5 +1,5 @@
 { self, inputs, ... }: {
-  flake.nixosModules.homeServerBorgBackup = { pkgs, ... }: let
+  flake.nixosModules.borgBackup = { pkgs, ... }: let
     pi256 = "192.168.50.191";
     user = "sean";
     ssdPushUrl = "http://localhost:3001/api/push/7A0I8FgFnTB40XNRkEG93OfpxOVhKHow";

@@ -1,5 +1,5 @@
 { self, inputs, ... }: {
-  flake.nixosModules.homeServerUptimeKuma = { pkgs, ... }: {
+  flake.nixosModules.uptimeKuma = { pkgs, ... }: {
     services.uptime-kuma = {
       enable = true;
       settings = {
