@@ -21,6 +21,14 @@
         btop
         docker-compose
         claude-code
+        android-tools
+        flutter
+        rustup
+        nodejs
+        clang
+        git-lfs
+        stripe-cli
+        cargo-tauri
       ];
 
       programs.fastfetch = {
