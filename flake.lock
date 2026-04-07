@@ -106,7 +106,8 @@
         "import-tree": "import-tree",
         "nix-flatpak": "nix-flatpak",
         "nixpkgs": "nixpkgs",
-        "sops-nix": "sops-nix"
+        "sops-nix": "sops-nix",
+        "tauri-shell": "tauri-shell"
       }
     },
     "sops-nix": {
@@ -128,6 +129,22 @@
         "repo": "sops-nix",
         "type": "github"
       }
+    },
+    "tauri-shell": {
+      "inputs": {
+        "nixpkgs": [
+          "nixpkgs"
+        ]
+      },
+      "locked": {
+        "path": "./shells/tauri",
+        "type": "path"
+      },
+      "original": {
+        "path": "./shells/tauri",
+        "type": "path"
+      },
+      "parent": []
     }
   },
   "root": "root",

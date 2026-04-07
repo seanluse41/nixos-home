@@ -124,6 +124,7 @@
       ];
       users.sean = { config, pkgs, lib, ... }: {
         imports = with self.homeModules; [
+          chromium
           bash
           vscode
           git
