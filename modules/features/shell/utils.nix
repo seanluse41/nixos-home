@@ -29,6 +29,7 @@
         git-lfs
         stripe-cli
         cargo-tauri
+        llmfit
       ];
 
       programs.fastfetch = {
