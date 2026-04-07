@@ -74,6 +74,7 @@
     home-manager = {
       useGlobalPkgs = true;
       useUserPackages = true;
+      backupFileExtension = "backup";
       users.sean = { ... }: {
         imports = with self.homeModules; [
           utils
