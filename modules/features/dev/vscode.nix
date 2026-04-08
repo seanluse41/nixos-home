@@ -12,6 +12,7 @@
           bradlc.vscode-tailwindcss
           tamasfe.even-better-toml
           redhat.vscode-yaml
+          jnoortheen.nix-ide
         ]
         ++ pkgs.vscode-utils.extensionsFromVscodeMarketplace [
           {

@@ -3,7 +3,7 @@
     programs.zsh = {
       enable = true;
       shellAliases = {
-        rebuild = "home-manager switch --flake ~/.config/home-manager#seanluse";
+        rebuild = "home-manager switch --flake ~/nixConfig#seanluse";
       };
       initContent = ''
         fastfetch
