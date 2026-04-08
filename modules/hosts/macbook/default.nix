@@ -22,6 +22,7 @@
       hugo
       devPackages
       utils
+      aws
       {
         home.username = "seanluse";
         home.homeDirectory = "/Users/sean";
