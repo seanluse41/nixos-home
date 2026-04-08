@@ -31,6 +31,7 @@
         cargo-tauri
         llmfit
         llama-cpp
+        uv
       ];
 
       programs.fastfetch = {
