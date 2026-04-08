@@ -20,7 +20,7 @@
       vscode
       communications
       hugo
-      packages
+      devPackages
       utils
       {
         home.username = "seanluse";
