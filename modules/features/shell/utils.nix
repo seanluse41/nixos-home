@@ -25,6 +25,7 @@
         flutter
         rustup
         nodejs
+        npm-check-updates
         clang
         git-lfs
         stripe-cli
