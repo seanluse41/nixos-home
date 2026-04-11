@@ -4,6 +4,13 @@
     system = "x86_64-linux";
     modules = with self.nixosModules; [
       homeServerConfig
+      tailscale
+      immich
+      borgBackup
+      uptimeKuma
+      nfs
+      jellyfin
+      transmission
       inputs.sops-nix.nixosModules.sops
       inputs.home-manager.nixosModules.default
       {
@@ -11,13 +18,6 @@
           utils
           bash
           git
-          tailscale
-          immich
-          borgBackup
-          uptimeKuma
-          nfs
-          jellyfin
-          transmission
         ];
       }
     ];
