@@ -33,11 +33,7 @@
         git-lfs
         stripe-cli
         cargo-tauri
-        # local llm
-        llmfit
-        llama
         uv
-        stable-diffusion-cpp
       ];
 
       programs.fastfetch = {

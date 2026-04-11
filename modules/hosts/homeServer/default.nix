@@ -14,10 +14,12 @@
       inputs.sops-nix.nixosModules.sops
       inputs.home-manager.nixosModules.default
       {
+        home-manager.extraSpecialArgs = { hostName = "homeServer"; };
         home-manager.users.sean.imports = with self.homeModules; [
           utils
           bash
           git
+          ai
         ];
       }
     ];

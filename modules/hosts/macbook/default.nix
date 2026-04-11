@@ -9,6 +9,7 @@
       inherit self inputs;
       nixpkgs-hugo = inputs.nixpkgs-hugo;
       nixpkgs-sass = inputs.nixpkgs-sass;
+      hostName = "macbook";
     };
     modules = with self.homeModules; [
       inputs.mac-app-util.homeManagerModules.default
@@ -23,6 +24,7 @@
       devPackages
       utils
       aws
+      ai
       {
         home.username = "seanluse";
         home.homeDirectory = "/Users/sean";

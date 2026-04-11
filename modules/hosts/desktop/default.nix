@@ -12,6 +12,7 @@
       desktopConfig
       inputs.home-manager.nixosModules.default
       {
+        home-manager.extraSpecialArgs = { hostName = "desktop"; };
         home-manager.users.sean.imports = with self.homeModules; [
           chromium
           bash
@@ -27,6 +28,7 @@
           utils
           aws
           kintone
+          ai
         ];
       }
     ];
