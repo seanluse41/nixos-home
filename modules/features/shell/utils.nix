@@ -2,6 +2,9 @@
 {
   flake.homeModules.utils =
     { pkgs, ... }:
+    let
+      llama = if pkgs.stdenv.isDarwin then pkgs.llama-cpp else pkgs.llama-cpp-rocm;
+    in
     {
       home.packages = with pkgs; [
         unzip
@@ -32,7 +35,7 @@
         cargo-tauri
         # local llm
         llmfit
-        llama-cpp
+        llama
         uv
         stable-diffusion-cpp
       ];

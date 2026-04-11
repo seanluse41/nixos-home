@@ -4,7 +4,7 @@
       enable = true;
       shellAliases = {
         rebuild = "home-manager switch --flake ~/nixConfig#seanluse";
-        gemma = "llama-server -hf ggml-org/gemma-4-E2B-it-GGUF --jinja -c 0 --host 127.0.0.1 --port 8033 -np 1 --min-p 0.0 --webui-mcp-proxy";
+        gemma = "llama-server -hf ggml-org/gemma-4-E2B-it-GGUF --jinja -c 0 --host 127.0.0.1 --port 8033 -np 1 --min-p 0.0 --webui-mcp-proxy --ngl 999";
       };
       initContent = ''
         fastfetch
